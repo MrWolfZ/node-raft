@@ -1,0 +1,56 @@
+{
+  "name": "raft-node",
+  "version": "0.1.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Jonathan Ziller",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run serve",
+    "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "build:watch": "npm run build -- -w",
+    "lint": "eslint src/**/*",
+    "test": "jest --forceExit --verbose --detectOpenHandles",
+    "test:watch": "npm run test -- --watch",
+    "serve": "node --enable-source-maps dist/server.js",
+    "serve:watch": "nodemon --enable-source-maps --watch dist --inspect=9999 dist/server.js"
+  },
+  "type": "module",
+  "nodemonConfig": {
+    "delay": 250
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "lusca": "^1.6.1",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/compression": "^1.7.0",
+    "@types/errorhandler": "^1.5.0",
+    "@types/express": "^4.17.9",
+    "@types/jest": "^26.0.15",
+    "@types/lusca": "^1.6.2",
+    "@types/node": "^14.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
+    "eslint": "^7.14.0",
+    "jest": "^26.6.3",
+    "jest-silent-reporter": "^0.3.0",
+    "jest-transform-stub": "^2.0.0",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.2.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.4.4",
+    "ts-node": "^9.0.0",
+    "tslib": "^2.0.3",
+    "typescript": "^4.1.2"
+  }
+}

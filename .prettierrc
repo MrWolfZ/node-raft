@@ -1,0 +1,20 @@
+{
+  "jsxSingleQuote": true,
+  "printWidth": 120,
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": [
+        "README.md"
+      ],
+      "options": {
+        "printWidth": 100
+      }
+    }
+  ],
+  "svelteStrictMode": true,
+  "svelteBracketNewLine": true
+}
