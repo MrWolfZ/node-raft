@@ -7,7 +7,7 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
   ],
-  ignorePatterns: ['bin/', 'node_modules/', '*.js', '*.generated.ts'],
+  ignorePatterns: ['bin/', 'node_modules/', '*.js', '*.cjs', '*.generated.ts'],
   parserOptions: {
     project: require('path').join(__dirname, 'tsconfig.base.json'),
   },

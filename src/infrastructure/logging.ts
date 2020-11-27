@@ -41,3 +41,5 @@ export const log = {
     }
   },
 }
+
+export type RootLogger = typeof log

@@ -1,19 +1,18 @@
-module.exports = {
+export default {
+  preset: 'ts-jest',
   globals: {
     'ts-jest': {
-      babelConfig: true,
+      tsconfig: './tsconfig.test.json',
     },
   },
   roots: ['<rootDir>/src'],
-  moduleFileExtensions: ['js', 'jsx', 'json', 'ts', 'tsx'],
   transform: {
-    '^.+\\.tsx?$': 'ts-jest',
-    '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
-    '^.+\\.jsx?$': 'babel-jest',
+    '^.+\\.tsx?$': './jest.transform.cjs',
   },
-  testMatch: ['src/**/*.test.ts'],
+  testMatch: ['**/*.test.ts'],
   reporters: [
-    '@jest/reporters/build/summary_reporter.js',
+    '@jest/reporters/build/SummaryReporter.js',
     ['jest-silent-reporter', { useDots: true, showWarnings: true }],
   ],
+  setupFilesAfterEnv: ['./jest.setup.js'],
 }

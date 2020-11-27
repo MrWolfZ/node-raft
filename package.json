@@ -13,8 +13,8 @@
     "build": "rimraf dist && tsc -p tsconfig.build.json",
     "build:watch": "npm run build -- -w",
     "lint": "eslint src/**/*",
-    "test": "jest --forceExit --verbose --detectOpenHandles",
-    "test:watch": "npm run test -- --watch",
+    "test": "jest --forceExit --verbose --detectOpenHandles --no-cache",
+    "test:watch": "jest --clearCache && npm run test -- --watch",
     "serve": "node --enable-source-maps dist/server.js",
     "serve:watch": "nodemon --enable-source-maps --watch dist --inspect=9999 dist/server.js"
   },
